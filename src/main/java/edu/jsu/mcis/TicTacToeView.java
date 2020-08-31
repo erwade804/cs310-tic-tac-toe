@@ -14,9 +14,11 @@ public class TicTacToeView {
         
         keyboard = new Scanner(System.in);
         
+
     }
 	
     public TicTacToeMove getNextMove(boolean isXTurn) {
+        
         
         /* Prompt the player to enter the row and the column of their next move.
            Return as a TicTacToeMove object. */
