@@ -112,7 +112,7 @@ public class TicTacToeModel {
         
         /* Return TRUE if the specified location is within the bounds of the board */
         
-        return row < width && col < width;
+        return row < width && col < width && row >= 0 && col >= 0;
         
     }
 	
