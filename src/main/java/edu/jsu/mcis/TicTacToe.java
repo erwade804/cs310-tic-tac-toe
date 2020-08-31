@@ -26,9 +26,7 @@ public class TicTacToe {
         TicTacToeController controller = new TicTacToeController(width);
         
         /* Start Main Loop */
-        
         controller.start();
-        
     }
     
 }
