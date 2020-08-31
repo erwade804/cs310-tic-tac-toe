@@ -19,7 +19,7 @@ public class TicTacToeView {
 	
     public TicTacToeMove getNextMove(boolean isXTurn) {
         
-        
+
         /* Prompt the player to enter the row and the column of their next move.
            Return as a TicTacToeMove object. */
         
@@ -35,7 +35,6 @@ public class TicTacToeView {
            String input = keyboard.nextLine();
            String[] parts = input.split(" ");
            int[] intParts = {Integer.parseInt(parts[0]), Integer.parseInt(parts[1])};
-           System.out.println(intParts);
 
         return new TicTacToeMove(intParts[0], intParts[1]);
 
