@@ -246,9 +246,7 @@ public class TicTacToeModel {
             }
             output.append(line +"\n");
         }
-        
         return output.toString();
-        
     }
     
 }

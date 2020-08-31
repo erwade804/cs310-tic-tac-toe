@@ -22,19 +22,20 @@ public class TicTacToeView {
            Return as a TicTacToeMove object. */
         
            String nextLine = "Player ";
-           if (xTurn){
+           if (isXTurn){
                nextLine = nextLine + "1 (X) Move:";
                nextLine = nextLine +"\nEnter the row and column numbers, separated by a space: ";
+           }else{
+            nextLine = nextLine + "2 (O) Move:";
+            nextLine = nextLine +"\nEnter the row and column numbers, separated by a space: ";
            }
            System.out.print(nextLine);
-
            String input = keyboard.nextLine();
-           System.out.println(input);
            String[] parts = input.split(" ");
-           int[] intParts = {String.toInteger(parts[0]), String.toInteger(parts[1])};
+           int[] intParts = {Integer.parseInt(parts[0]), Integer.parseInt(parts[1])};
            System.out.println(intParts);
 
-        return new TicTactoeMove(intParts[0], intParts[1]);
+        return new TicTacToeMove(intParts[0], intParts[1]);
 
     }
 
