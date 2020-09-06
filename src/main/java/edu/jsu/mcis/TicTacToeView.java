@@ -58,10 +58,11 @@ public class TicTacToeView extends JPanel {
 
         /* Disable buttons (to disallow input after game is over) */
         for(int i = 0; i < board.length; i++){
-            for(int j = 0; j < board.length; J++){
-                board[i][j].disable();
+            for(int j = 0; j < board.length; j++){
+                board[i][j].setEnabled(false);
             }
         }
+        
         
     }
         

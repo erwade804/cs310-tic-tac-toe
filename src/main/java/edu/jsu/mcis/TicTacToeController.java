@@ -4,6 +4,8 @@ package edu.jsu.mcis;
 import java.awt.event.*;
 import javax.swing.*;
 
+import edu.jsu.mcis.TicTacToeModel.Mark;
+
 public class TicTacToeController implements ActionListener {
 
     private final TicTacToeModel model;
@@ -38,6 +40,10 @@ public class TicTacToeController implements ActionListener {
         int second = num%10;
         model.makeMark(first, second);
         view.updateSquares();
+        if(!model.getResult().equals(TicTacToeModel.Result.NONE)){
+            view.showResult(model.getResult().toString());
+            view.disableSquares();
+        }
     }
 
 }
