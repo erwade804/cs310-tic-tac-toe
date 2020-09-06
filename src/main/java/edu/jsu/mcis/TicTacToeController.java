@@ -20,7 +20,8 @@ public class TicTacToeController implements ActionListener {
         
     }
 
-    public String getMarkAsString(int row, int col) {       
+    public String getMarkAsString(int row, int col) {      
+        System.out.println(model.getMark(row, col).toString()); 
         return (model.getMark(row, col).toString());       
     }
    
@@ -30,7 +31,13 @@ public class TicTacToeController implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent event) {
-        // INSERT YOUR CODE HERE
+        String evt = event.toString();
+        evt = evt.substring(evt.length()-2);
+        int num = Integer.parseInt(evt);
+        int first = num/10;
+        int second = num%10;
+        model.makeMark(first, second);
+        view.updateSquares();
     }
 
 }
